@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aurum Café — Calidad Premium</title>
+  <meta name="description" content="Landing page premium en tonos café. Tradición, calidad y pasión por el café." />
+  <!-- Tipografías: elegantes con fallback sin depender de externos -->
+  <style>
+    /* Fallback rápido para tipografías elegantes sin fuentes externas */
+    :root { --font-serif: Georgia, "Times New Roman", Times, serif; --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+  </style>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <!-- Navbar fija y elegante -->
+  <header class="navbar" id="navbar" aria-label="Barra de navegación">
+    <div class="container nav-content">
+      <a href="#inicio" class="brand" aria-label="Aurum Café">Aurum Café</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <nav id="navMenu" class="nav-menu" role="navigation">
+        <a href="#inicio" class="nav-link active">Inicio</a>
+        <a href="#acerca" class="nav-link">Acerca de Nosotros</a>
+        <a href="#procesos" class="nav-link">Procesos</a>
+        <a href="#productos" class="nav-link">Productos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section: minimalista premium en modo oscuro café -->
+    <section id="inicio" class="section hero" aria-label="Sección inicio">
+      <div class="container hero-content">
+        <h1 class="hero-title">Café de Origen, Elegancia en Cada Taza</h1>
+        <p class="hero-subtitle">Tradición, calidad y un tostado perfecto para un aroma inolvidable.</p>
+        <a class="btn btn-primary" href="#productos">Explorar Productos</a>
+      </div>
+      <!-- Fondo decorativo con SVG inline para no depender de imágenes externas -->
+      <svg class="hero-pattern" viewBox="0 0 200 200" aria-hidden="true">
+        <defs>
+          <radialGradient id="rg" cx="50%" cy="50%" r="60%">
+            <stop offset="0%" stop-color="rgba(97, 72, 58, 0.6)" />
+            <stop offset="100%" stop-color="rgba(53, 35, 32, 0.0)" />
+          </radialGradient>
+        </defs>
+        <circle cx="100" cy="100" r="100" fill="url(#rg)"></circle>
+      </svg>
+    </section>
+
+    <!-- Acerca de Nosotros -->
+    <section id="acerca" class="section about" aria-label="Acerca de Nosotros">
+      <div class="container grid-two">
+        <div>
+          <h2 class="section-title">Pasión por el Café</h2>
+          <p class="section-text">
+            En Aurum Café combinamos tradición y técnicas modernas para seleccionar los mejores granos,
+            tostar con precisión y ofrecer una experiencia sensorial única. Nuestra dedicación a la calidad
+            y al detalle se refleja en cada sorbo.
+          </p>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <span class="stat-value">+20</span>
+            <span class="stat-label">Años de experiencia</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value">100%</span>
+            <span class="stat-label">Selección de origen</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Procesos: cultivo, tostado, molido, servido -->
+    <section id="procesos" class="section processes" aria-label="Procesos del Café">
+      <div class="container">
+        <h2 class="section-title center">Nuestro Proceso</h2>
+        <div class="process-grid">
+          <!-- Cultivo -->
+          <article class="process-card">
+            <div class="process-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32"><path d="M16 2c6 4 9 10 9 14 0 6-4 10-9 14-5-4-9-8-9-14 0-4 3-10 9-14z" fill="currentColor"/></svg>
+            </div>
+            <h3 class="process-title">Cultivo</h3>
+            <p class="process-text">Granos seleccionados de altura, cultivados con prácticas sostenibles.</p>
+          </article>
+          <!-- Tostado -->
+          <article class="process-card">
+            <div class="process-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32"><path d="M8 24c0-6 8-10 8-18 4 3 8 10 8 14 0 6-4 10-8 10s-8-4-8-6z" fill="currentColor"/></svg>
+            </div>
+            <h3 class="process-title">Tostado</h3>
+            <p class="process-text">Perfil aromático balanceado: notas de cacao y caramelo.</p>
+          </article>
+          <!-- Molido -->
+          <article class="process-card">
+            <div class="process-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32"><rect x="6" y="6" width="20" height="8" rx="2" fill="currentColor"/><rect x="10" y="16" width="12" height="10" rx="2" fill="currentColor"/></svg>
+            </div>
+            <h3 class="process-title">Molido</h3>
+            <p class="process-text">Molienda precisa según método: espresso, filtrado o prensa.</p>
+          </article>
+          <!-- Servido -->
+          <article class="process-card">
+            <div class="process-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32"><path d="M6 12h18a2 2 0 012 2v2a6 6 0 01-6 6H10a4 4 0 01-4-4v-6z" fill="currentColor"/><path d="M24 16a4 4 0 104 4v-2a2 2 0 00-2-2h-2z" fill="currentColor"/></svg>
+            </div>
+            <h3 class="process-title">Servido</h3>
+            <p class="process-text">Temperatura ideal y presentación impecable para cada taza.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Productos -->
+    <section id="productos" class="section products" aria-label="Nuestros Productos">
+      <div class="container">
+        <h2 class="section-title center">Productos</h2>
+        <div class="products-grid">
+          <!-- Producto 1 -->
+          <article class="product-card">
+            <div class="product-header">
+              <h3 class="product-title">Reserva Oro</h3>
+              <span class="product-price">$ 18.00</span>
+            </div>
+            <p class="product-text">Blend premium de origen único, notas de cacao y nuez.</p>
+            <a class="btn btn-outline" href="#" aria-label="Comprar Reserva Oro">Comprar</a>
+          </article>
+          <!-- Producto 2 -->
+          <article class="product-card">
+            <div class="product-header">
+              <h3 class="product-title">Selva Intensa</h3>
+              <span class="product-price">$ 16.00</span>
+            </div>
+            <p class="product-text">Tostado medio con acidez brillante y final sedoso.</p>
+            <a class="btn btn-outline" href="#" aria-label="Comprar Selva Intensa">Comprar</a>
+          </article>
+          <!-- Producto 3 -->
+          <article class="product-card">
+            <div class="product-header">
+              <h3 class="product-title">Cumbre Espresso</h3>
+              <span class="product-price">$ 19.00</span>
+            </div>
+            <p class="product-text">Cuerpo alto, crema generosa y notas de caramelo quemado.</p>
+            <a class="btn btn-outline" href="#" aria-label="Comprar Cumbre Espresso">Comprar</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" aria-label="Pie de página">
+    <div class="container footer-content">
+      <span>© Aurum Café — Tradición y Calidad</span>
+      <nav class="footer-nav">
+        <a href="#acerca">Acerca</a>
+        <a href="#procesos">Procesos</a>
+        <a href="#productos">Productos</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
