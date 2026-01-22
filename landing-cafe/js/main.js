@@ -1,5 +1,5 @@
 /*
-  Aurum Café — main.js
+  Cafe Tio — main.js
   - Scroll suave y activo en el navbar
   - Animaciones básicas al hacer scroll
   - Menú móvil con transición
