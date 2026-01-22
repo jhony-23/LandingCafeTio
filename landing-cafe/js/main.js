@@ -72,4 +72,18 @@
     el.classList.add('in');
     el.classList.add('revealed');
   });
+
+  // Construye enlaces de WhatsApp para botones de compra desde un número centralizado
+  const waNumber = (document.body.dataset.waNumber || '').replace(/\s+/g, '');
+  const waText = (document.body.dataset.waText || 'Hola me encantaria comprar').trim();
+  const buyButtons = Array.from(document.querySelectorAll('.buy-btn'));
+  buyButtons.forEach(btn => {
+    const product = btn.dataset.product || btn.closest('.product-card')?.querySelector('.product-title')?.textContent?.trim() || '';
+    const msg = encodeURIComponent(`${waText} ${product}`.trim());
+    if (waNumber) {
+      btn.setAttribute('href', `https://wa.me/${waNumber}?text=${msg}`);
+      btn.setAttribute('target', '_blank');
+      btn.setAttribute('rel', 'noopener');
+    }
+  });
 })();
