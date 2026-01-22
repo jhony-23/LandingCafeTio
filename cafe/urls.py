@@ -16,7 +16,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.views.generic import TemplateView
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # Ruta principal: renderiza la landing en index.html
+    path('', TemplateView.as_view(template_name='index.html'), name='home'),
 ]
+
+# Servir assets de la landing directamente en desarrollo
+urlpatterns += static('css/', document_root=settings.BASE_DIR / 'landing-cafe' / 'css')
+urlpatterns += static('js/', document_root=settings.BASE_DIR / 'landing-cafe' / 'js')
+urlpatterns += static('assets/images/', document_root=settings.BASE_DIR / 'landing-cafe' / 'assets' / 'images')

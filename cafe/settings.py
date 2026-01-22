@@ -55,7 +55,9 @@ ROOT_URLCONF = 'cafe.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'landing-cafe',  # Permite cargar index.html directamente como plantilla
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
