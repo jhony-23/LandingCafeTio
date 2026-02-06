@@ -78,8 +78,21 @@
   const waText = (document.body.dataset.waText || 'Hola me encantaria comprar').trim();
   const buyButtons = Array.from(document.querySelectorAll('.buy-btn'));
   buyButtons.forEach(btn => {
-    const product = btn.dataset.product || btn.closest('.product-card')?.querySelector('.product-title')?.textContent?.trim() || '';
-    const msg = encodeURIComponent(`${waText} ${product}`.trim());
+    const card = btn.closest('.product-card');
+    const title = btn.dataset.product || card?.querySelector('.product-title')?.textContent?.trim() || '';
+    const desc = card?.querySelector('.product-text')?.textContent?.trim() || '';
+    const price = card?.querySelector('.product-price')?.textContent?.trim() || '';
+    const imgSrc = card?.querySelector('img')?.getAttribute('src') || '';
+    const imgUrl = imgSrc ? new URL(imgSrc, window.location.href).href : '';
+
+    const lines = [
+      `${waText} ${title}`.trim(),
+      desc ? `Descripción: ${desc}` : '',
+      price ? `Precio: ${price}` : '',
+      imgUrl ? `Imagen: ${imgUrl}` : ''
+    ].filter(Boolean);
+
+    const msg = encodeURIComponent(lines.join('\n'));
     if (waNumber) {
       btn.setAttribute('href', `https://wa.me/${waNumber}?text=${msg}`);
       btn.setAttribute('target', '_blank');
