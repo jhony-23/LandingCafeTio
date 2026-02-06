@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from landingcafe.views import product_detail
 from django.views.generic import TemplateView
 from django.conf import settings
 from django.conf.urls.static import static
@@ -24,6 +25,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # Ruta principal: renderiza la landing en index.html
     path('', TemplateView.as_view(template_name='index.html'), name='home'),
+    # Detalle de producto con metadatos Open Graph para WhatsApp preview
+    path('p/<slug:slug>/', product_detail, name='product_detail'),
 ]
 
 # Servir assets de la landing directamente en desarrollo

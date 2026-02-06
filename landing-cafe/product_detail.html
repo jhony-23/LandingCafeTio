@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ title }}</title>
+  <!-- Open Graph para preview en WhatsApp -->
+  <meta property="og:title" content="{{ title }}" />
+  <meta property="og:description" content="{{ description }}" />
+  <meta property="og:image" content="{{ image_url }}" />
+  <meta property="og:url" content="{{ product_url }}" />
+  <meta property="og:type" content="product" />
+  <!-- Canonical -->
+  <link rel="canonical" href="{{ product_url }}" />
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; margin: 0; padding: 24px; background: #2b1d1b; color: #F5F5DC; }
+    .container { max-width: 900px; margin: 0 auto; }
+    .card { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; background: rgba(75,46,43,0.52); border: 1px solid rgba(193,154,107,0.18); border-radius: 16px; padding: 18px; }
+    .card img { width: 100%; height: 100%; object-fit: cover; border-radius: 12px; }
+    h1 { margin: 0 0 8px; font-size: 1.8rem; }
+    .price { color: #C19A6B; font-weight: 700; margin: 6px 0 10px; }
+    p { color: #dacfb8; }
+    .actions { margin-top: 14px; }
+    .btn { display: inline-block; padding: 10px 16px; border-radius: 999px; font-weight: 600; background: #C19A6B; color: #2a1e1c; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div>
+        <img src="{{ image_url }}" alt="{{ title }}" />
+      </div>
+      <div>
+        <h1>{{ title }}</h1>
+        <div class="price">{{ price }}</div>
+        <p>{{ description }}</p>
+        <div class="actions">
+          <a class="btn" href="/" aria-label="Volver">Volver</a>
+        </div>
+      </div>
+    </div>
+    <p style="margin-top:12px; font-size:0.92rem; color:#dacfb8;">Comparte este enlace en WhatsApp para ver el preview: <a href="{{ product_url }}" style="color:#F5F5DC; text-decoration:underline;">{{ product_url }}</a></p>
+  </div>
+</body>
+</html>
