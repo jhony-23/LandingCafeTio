@@ -18,6 +18,8 @@ Proyecto Django para una landing de café.
 ```bash
 # Activar entorno si aplica
 # python -m venv .venv && .venv\\Scripts\\activate
+# ngrog http 8000 tunel de pruebas
+# Ejecucion para pruebas python manage.py runserver 8000
 
 # Instalar dependencias
 pip install django
