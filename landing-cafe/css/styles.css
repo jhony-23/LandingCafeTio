@@ -1,3 +1,5 @@
+/* Fuente Poppins aplicada solo donde se requiera Tailwind */
+.tw-poppins { font-family: 'Poppins', var(--font-sans); }
 /*
   Cafe Tio — styles.css
   - Modo oscuro café minimalista
@@ -100,12 +102,21 @@ a { color: inherit; text-decoration: none; }
 .stat-label { color: var(--muted); font-size: 0.95rem; }
 
 /* Procesos */
-.process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
-.process-card { background: rgba(75,46,43,0.5); border: 1px solid rgba(193,154,107,0.16); border-radius: var(--radius-lg); padding: 18px; box-shadow: var(--shadow-soft); transform: translateY(8px); opacity: 0; transition: transform 320ms ease, opacity 320ms ease; }
-.process-card.revealed { transform: translateY(0); opacity: 1; }
-.process-icon { width: 52px; height: 52px; color: var(--coffee-500); background: rgba(193,154,107,0.12); border-radius: 14px; display: grid; place-items: center; margin-bottom: 10px; }
-.process-title { font-family: var(--font-serif); margin: 6px 0; }
-.process-text { color: var(--muted); }
+.process-grid { display: none; }
+.process-card, .process-icon, .process-title, .process-text { display: none; }
+
+/* Proceso en Imágenes (galería) */
+.process-gallery, .gallery-grid, .gallery-item, .gallery-overlay { display: none; }
+
+/* Creations (galería expandible) */
+.creations { font-family: 'Poppins', var(--font-sans); }
+.creations-header { font-weight: 600; text-align: center; font-size: clamp(1.6rem, 3.2vw, 2.2rem); margin: 0; }
+.creations-sub { text-align: center; color: var(--muted); font-size: 0.95rem; margin-top: 6px; max-width: 640px; margin-left: auto; margin-right: auto; }
+.creations-strip { display: flex; gap: 8px; height: 400px; width: 100%; max-width: 1100px; margin: 40px auto 0; }
+.creations-item { position: relative; flex: 1; min-width: 220px; height: 100%; border-radius: var(--radius-lg); overflow: hidden; background: rgba(193,154,107,0.12); box-shadow: var(--shadow-soft); transition: flex 500ms ease; }
+.creations-strip:hover .creations-item { flex: 0.9; }
+.creations-item:hover { flex: 2; }
+.creations-item img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
 
 /* Distribución 4 arriba, 3 abajo (centradas) en desktop usando flex-wrap */
 @media (min-width: 993px) {
@@ -140,8 +151,11 @@ a { color: inherit; text-decoration: none; }
 /* Responsive */
 @media (max-width: 992px) {
   .grid-two { grid-template-columns: 1fr; }
-  .process-grid { grid-template-columns: repeat(2, 1fr); }
+  .process-grid { display: none; }
   .products-grid { grid-template-columns: repeat(2, 1fr); }
+  .gallery-grid { display: none; }
+  .creations-strip { height: 320px; }
+  .creations-item { min-width: 180px; }
 }
 @media (max-width: 720px) {
   .nav-toggle { display: inline-block; }
@@ -149,4 +163,7 @@ a { color: inherit; text-decoration: none; }
   .nav-menu.open { transform: scale(1) translateY(0); opacity: 1; pointer-events: auto; }
   .section { padding: 84px 0; }
   .products-grid { grid-template-columns: 1fr; }
+  .gallery-grid { display: none; }
+  .creations-strip { height: 260px; }
+  .creations-item { min-width: 160px; }
 }
