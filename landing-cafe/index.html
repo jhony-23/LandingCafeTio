@@ -203,14 +203,27 @@
     </section>
   </main>
 
-  <footer class="footer" aria-label="Pie de página">
-    <div class="container footer-content">
-      <span>© Cafe Tio — Tradición y Calidad</span>
-      <nav class="footer-nav">
-        <a href="#acerca">Acerca</a>
-        <a href="#procesos">Procesos</a>
-        <a href="#productos">Productos</a>
-      </nav>
+  <!-- Footer con diseño integrado tipo gradient, manteniendo información -->
+  <footer class="w-full bg-gradient-to-b from-[#4B2E2B] to-[#2b1d1b] text-[#F5F5DC]" aria-label="Pie de página">
+    <div class="max-w-7xl mx-auto px-6 py-16 flex flex-col items-center">
+      <div class="flex items-center space-x-3 mb-6">
+        <!-- Marca: si luego agregas un logo en static, podemos usarlo aquí -->
+        <span class="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#C19A6B] text-[#2a1e1c] font-bold">CT</span>
+        <span class="text-lg font-serif font-bold">Cafe Tio</span>
+      </div>
+      <p class="text-center max-w-xl text-sm font-normal leading-relaxed text-[#dacfb8]">
+        Tradición y calidad en cada taza. Selección de origen y tostado preciso para una experiencia inolvidable.
+      </p>
+    </div>
+    <div class="border-t border-[#C19A6B]/25">
+      <div class="max-w-7xl mx-auto px-6 py-6 text-center text-sm font-normal flex flex-wrap items-center justify-center gap-4">
+        <nav class="flex gap-4 text-[#dacfb8]">
+          <a href="#acerca" class="hover:text-[#F5F5DC]">Acerca</a>
+          <a href="#procesos" class="hover:text-[#F5F5DC]">Procesos</a>
+          <a href="#productos" class="hover:text-[#F5F5DC]">Productos</a>
+        </nav>
+        <span class="text-[#dacfb8]">© Cafe Tio — Tradición y Calidad</span>
+      </div>
     </div>
   </footer>
 </body>
