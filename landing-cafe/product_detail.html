@@ -1,9 +1,11 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{{ title }}</title>
+  <link rel="icon" href="{% static 'assets/images/semilla-de-cafe.png' %}" type="image/png" />
   <!-- Open Graph para preview en WhatsApp -->
   <meta property="og:title" content="{{ title }}" />
   <meta property="og:description" content="{{ description }}" />
