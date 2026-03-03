@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cafe Tio — Procesos y Productos</title>
+  <meta name="description" content="Conoce nuestro proceso y explora nuestros productos." />
+  <style>
+    :root { --font-serif: Georgia, "Times New Roman", Times, serif; --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+  </style>
+  <link rel="stylesheet" href="{% static 'css/catalogo.css' %}" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = { corePlugins: { preflight: false } };
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="{% static 'js/main.js' %}"></script>
+</head>
+<body data-wa-number="59328539" data-wa-text="Hola me encantaria comprar">
+  <header class="navbar" id="navbar" aria-label="Barra de navegación">
+    <div class="container">
+      <div class="nav-surface" role="navigation" aria-label="Menú principal">
+        <a href="/#inicio" class="brand" aria-label="Cafe Tio">Cafe Tio</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <nav id="navMenu" class="nav-menu" role="navigation">
+          <a href="/#inicio" class="nav-link">Inicio</a>
+          <a href="/#acerca" class="nav-link">Acerca de Nosotros</a>
+          <a href="#procesos" class="nav-link active">Procesos</a>
+          <a href="#productos" class="nav-link">Productos</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="procesos" class="section" aria-label="Nuestro Proceso">
+      <div class="container tw-poppins">
+          <h2 class="section-title center">Nuestro Proceso</h2>
+          <p class="section-text center">Una colección visual de nuestras etapas clave, diseñada con intención y estilo.</p>
+          <div class="flex items-center gap-2 h-[400px] w-full max-w-4xl mt-10 mx-auto px-6 sm:px-6 lg:px-8">
+          <div class="relative group flex-grow transition-all w-56 rounded-lg overflow-hidden h-[400px] duration-500 hover:w-full">
+            <img class="h-full w-full object-cover object-center" src="{% static 'assets/images/Cultivo.jpg' %}" alt="Cultivo">
+            <div class="absolute bottom-3 left-3 right-3">
+              <div class="inline-flex flex-col gap-1 px-3 py-2 bg-[#7C5136]/42 backdrop-blur-sm text-[#D2C1A9] rounded-md shadow-md transition-all duration-300 group-hover:bg-[#7C5136]/55">
+                <span class="text-sm font-semibold tracking-wide">Cultivo</span>
+                <span class="text-xs opacity-90">Selección de semillas y cuidado del cafetal.</span>
+              </div>
+            </div>
+          </div>
+          <div class="relative group flex-grow transition-all w-56 rounded-lg overflow-hidden h-[400px] duration-500 hover:w-full">
+            <img class="h-full w-full object-cover object-center" src="{% static 'assets/images/Cosecha.jpg' %}" alt="Cosecha">
+            <div class="absolute bottom-3 left-3 right-3">
+              <div class="inline-flex flex-col gap-1 px-3 py-2 bg-[#7C5136]/42 backdrop-blur-sm text-[#D2C1A9] rounded-md shadow-md transition-all duration-300 group-hover:bg-[#7C5136]/55">
+                <span class="text-sm font-semibold tracking-wide">Cosecha</span>
+                <span class="text-xs opacity-90">Recolección manual en punto óptimo de madurez.</span>
+              </div>
+            </div>
+          </div>
+          <div class="relative group flex-grow transition-all w-56 rounded-lg overflow-hidden h-[400px] duration-500 hover:w-full">
+            <img class="h-full w-full object-cover object-center" src="{% static 'assets/images/Procesamiento.jpg' %}" alt="Procesamiento">
+            <div class="absolute bottom-3 left-3 right-3">
+              <div class="inline-flex flex-col gap-1 px-3 py-2 bg-[#7C5136]/42 backdrop-blur-sm text-[#D2C1A9] rounded-md shadow-md transition-all duration-300 group-hover:bg-[#7C5136]/55">
+                <span class="text-sm font-semibold tracking-wide">Procesamiento</span>
+                <span class="text-xs opacity-90">Beneficiado húmedo/seco para resaltar el perfil.</span>
+              </div>
+            </div>
+          </div>
+          <div class="relative group flex-grow transition-all w-56 rounded-lg overflow-hidden h-[400px] duration-500 hover:w-full">
+            <img class="h-full w-full object-cover object-center" src="{% static 'assets/images/Secado.jpg' %}" alt="Secado">
+            <div class="absolute bottom-3 left-3 right-3">
+              <div class="inline-flex flex-col gap-1 px-3 py-2 bg-[#7C5136]/42 backdrop-blur-sm text-[#D2C1A9] rounded-md shadow-md transition-all duration-300 group-hover:bg-[#7C5136]/55">
+                <span class="text-sm font-semibold tracking-wide">Secado</span>
+                <span class="text-xs opacity-90">Secado controlado para estabilidad y sabor.</span>
+              </div>
+            </div>
+          </div>
+          <div class="relative group flex-grow transition-all w-56 rounded-lg overflow-hidden h-[400px] duration-500 hover:w-full">
+            <img class="h-full w-full object-cover object-center" src="{% static 'assets/images/Tostado.jpg' %}" alt="Tostado">
+            <div class="absolute bottom-3 left-3 right-3">
+              <div class="inline-flex flex-col gap-1 px-3 py-2 bg-[#7C5136]/42 backdrop-blur-sm text-[#D2C1A9] rounded-md shadow-md transition-all duration-300 group-hover:bg-[#7C5136]/55">
+                <span class="text-sm font-semibold tracking-wide">Tostado</span>
+                <span class="text-xs opacity-90">Curvas precisas para un balance ideal.</span>
+              </div>
+            </div>
+          </div>
+          <div class="relative group flex-grow transition-all w-56 rounded-lg overflow-hidden h-[400px] duration-500 hover:w-full">
+            <img class="h-full w-full object-cover object-center" src="{% static 'assets/images/Molido.jpg' %}" alt="Molido">
+            <div class="absolute bottom-3 left-3 right-3">
+              <div class="inline-flex flex-col gap-1 px-3 py-2 bg-[#7C5136]/42 backdrop-blur-sm text-[#D2C1A9] rounded-md shadow-md transition-all duration-300 group-hover:bg-[#7C5136]/55">
+                <span class="text-sm font-semibold tracking-wide">Molido</span>
+                <span class="text-xs opacity-90">Ajuste según método para extracción perfecta.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="productos" class="section products" aria-label="Nuestros Productos">
+      <div class="container">
+        <h2 class="section-title center">Productos</h2>
+        <div class="products-grid">
+          <article class="product-card">
+            <div class="product-header">
+              <h3 class="product-title">Reserva Oro</h3>
+              <span class="product-price">Q 18.00</span>
+            </div>
+            <div class="product-image">
+              <img src="{% static 'assets/images/reserva-oro.jpg' %}" alt="Reserva Oro" loading="lazy">
+            </div>
+            <p class="product-text">Blend premium de origen único, notas de cacao y nuez.</p>
+            <a class="btn btn-outline buy-btn" href="#" data-product="Reserva Oro" data-slug="reserva-oro" aria-label="Comprar Reserva Oro por WhatsApp">Comprar</a>
+          </article>
+          <article class="product-card">
+            <div class="product-header">
+              <h3 class="product-title">Selva Intensa</h3>
+              <span class="product-price">Q 16.00</span>
+            </div>
+            <div class="product-image">
+              <img src="{% static 'assets/images/selva-intensa.jpg' %}" alt="Selva Intensa" loading="lazy">
+            </div>
+            <p class="product-text">Tostado medio con acidez brillante y final sedoso.</p>
+            <a class="btn btn-outline buy-btn" href="#" data-product="Selva Intensa" data-slug="selva-intensa" aria-label="Comprar Selva Intensa por WhatsApp">Comprar</a>
+          </article>
+          <article class="product-card">
+            <div class="product-header">
+              <h3 class="product-title">Cumbre Espresso</h3>
+              <span class="product-price">Q 19.00</span>
+            </div>
+            <div class="product-image">
+              <img src="{% static 'assets/images/cumbre-espresso.jpg' %}" alt="Cumbre Espresso" loading="lazy">
+            </div>
+            <p class="product-text">Cuerpo alto, crema generosa y notas de caramelo quemado.</p>
+            <a class="btn btn-outline buy-btn" href="#" data-product="Cumbre Espresso" data-slug="cumbre-espresso" aria-label="Comprar Cumbre Espresso por WhatsApp">Comprar</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="w-full bg-gradient-to-b from-[#C6A98C] to-[#9F7A5F] text-[#4B3025]" aria-label="Pie de página">
+    <div class="max-w-7xl mx-auto px-6 py-16 flex flex-col items-center">
+      <div class="flex items-center space-x-3 mb-6">
+        <span class="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#C6A98C] text-[#4B3025] font-bold">CT</span>
+        <span class="text-lg font-serif font-bold">Cafe Tio</span>
+      </div>
+      <p class="text-center max-w-xl text-sm font-normal leading-relaxed text-[#4B3025]">
+        Tradición y calidad en cada taza. Selección de origen y tostado preciso para una experiencia inolvidable.
+      </p>
+    </div>
+    <div class="border-t border-[#D2C1A9]/40">
+      <div class="max-w-7xl mx-auto px-6 py-6 text-center text-sm font-normal flex flex-wrap items-center justify-center gap-4">
+        <nav class="flex gap-4 text-[#7C5136]">
+          <a href="/#acerca" class="hover:text-[#4B3025]">Acerca</a>
+          <a href="#procesos" class="hover:text-[#4B3025]">Procesos</a>
+          <a href="#productos" class="hover:text-[#4B3025]">Productos</a>
+        </nav>
+        <span class="text-[#7C5136]">© Cafe Tio — Tradición y Calidad</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

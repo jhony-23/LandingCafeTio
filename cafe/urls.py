@@ -25,6 +25,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # Ruta principal: renderiza la landing en index.html
     path('', TemplateView.as_view(template_name='index.html'), name='home'),
+    # Sección separada: procesos y productos
+    path('catalogo/', TemplateView.as_view(template_name='procesos_productos.html'), name='catalogo'),
     # Detalle de producto con metadatos Open Graph para WhatsApp preview
     path('p/<slug:slug>/', product_detail, name='product_detail'),
 ]
